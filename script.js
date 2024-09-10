@@ -25,3 +25,11 @@ overlayEl.addEventListener('click', function () {
   modalEl.classList.add('hidden');
   overlayEl.classList.add('hidden');
 });
+
+// Add esc keyboard event listener
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    modalEl.classList.add('hidden');
+    overlayEl.classList.add('hidden');
+  }
+});
