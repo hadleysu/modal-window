@@ -29,7 +29,7 @@ overlayEl.addEventListener('click', closeModal);
 
 // Add esc keyboard event listener
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') {
+  if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) {
     closeModal();
   }
 });
