@@ -14,22 +14,24 @@ for (let i = 0; i < buttonEls.length; i++) {
   });
 }
 
-// Add close modal button event listener
-closeButtonEl.addEventListener('click', function () {
+const closeModal = function () {
   modalEl.classList.add('hidden');
   overlayEl.classList.add('hidden');
+};
+
+// Add close modal button event listener
+closeButtonEl.addEventListener('click', function () {
+  closeModal();
 });
 
 // Add overlay event listener
 overlayEl.addEventListener('click', function () {
-  modalEl.classList.add('hidden');
-  overlayEl.classList.add('hidden');
+  closeModal();
 });
 
 // Add esc keyboard event listener
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
-    modalEl.classList.add('hidden');
-    overlayEl.classList.add('hidden');
+    closeModal();
   }
 });
