@@ -13,9 +13,7 @@ const openModal = function () {
 // Refactor: use querySelectorAll to add event listeners to multiple modal buttons
 for (let i = 0; i < buttonEls.length; i++) {
   // Add show modal button event listener
-  buttonEls[i].addEventListener('click', function () {
-    openModal();
-  });
+  buttonEls[i].addEventListener('click', openModal);
 }
 
 const closeModal = function () {
@@ -24,14 +22,10 @@ const closeModal = function () {
 };
 
 // Add close modal button event listener
-closeButtonEl.addEventListener('click', function () {
-  closeModal();
-});
+closeButtonEl.addEventListener('click', closeModal);
 
 // Add overlay event listener
-overlayEl.addEventListener('click', function () {
-  closeModal();
-});
+overlayEl.addEventListener('click', closeModal);
 
 // Add esc keyboard event listener
 document.addEventListener('keydown', function (e) {
