@@ -1,3 +1,3 @@
 # modal-window
 
-Simple webpage with three buttons. Each button triggers a modal window, which can be closed by clicking the close button or clicking outside the modal.
+A simple webpage with three buttons, each triggering a modal window. The modal can be closed by clicking the close button, pressing 'esc', or clicking outside the modal.
