@@ -1,11 +1,14 @@
 'use strict';
 
-const buttonEl = document.querySelector('.show-modal');
 const modalEl = document.querySelector('.modal');
 const overlayEl = document.querySelector('.overlay');
+const buttonEls = document.querySelectorAll('.show-modal');
 
-// Add show modal button event listener
-buttonEl.addEventListener('click', function () {
-  modalEl.classList.remove('hidden');
-  overlayEl.classList.remove('hidden');
-});
+// Refactor: use querySelectorAll to add event listeners to multiple modal buttons
+for (let i = 0; i < buttonEls.length; i++) {
+  // Add show modal button event listener
+  buttonEls[i].addEventListener('click', function () {
+    modalEl.classList.remove('hidden');
+    overlayEl.classList.remove('hidden');
+  });
+}
